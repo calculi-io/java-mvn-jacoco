@@ -32,13 +32,13 @@
 					{
 						"name": "validate",
 						"definition": "Run the maven validate command",
-						"command": "mvn clean package",
+						"command": "cd custom_dir\nmvn clean package",
 						"properties": null
 					},
 					{
 						"name": "copy-jar",
 						"definition": "Copy final JAR to expected location",
-						"command": "cp -f target/maven-code-coverage.jar",
+						"command": "cp -f custom_dir/target/maven-code-coverage.jar",
 						"properties": null
 					}
 				],
