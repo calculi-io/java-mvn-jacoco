@@ -38,7 +38,7 @@
 					{
 						"name": "copy-jar",
 						"definition": "Copy final JAR to expected location",
-						"command": "cp -f custom_dir/target/maven-code-coverage.jar",
+						"command": "cp -f custom_dir/target/maven-code-coverage.jar .",
 						"properties": null
 					}
 				],
@@ -93,7 +93,7 @@
 						"dependencies": [],
 						"downloads": [],
 						"files": [
-							"./custom_dir/target/maven-code-coverage.jar"
+							"custom_dir/target/maven-code-coverage.jar"
 						],
 						"package_install_command": "",
 						"installed_path": ""
