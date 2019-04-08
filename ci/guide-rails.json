@@ -47,7 +47,13 @@
 						"fetch_logs": true,
 						"code_analysis": {
 							"publish": true,
-							"properties": []
+							"properties": [
+								{
+	"name": "sonar.jacoco.reportPaths",
+	"value": "./custom_dir/target/jacoco.exec",
+	"type": "string"
+}
+							]
 						},
 						"delete_instances": true
 					},
