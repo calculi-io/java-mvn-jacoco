@@ -49,10 +49,10 @@
 							"publish": true,
 							"properties": [
 								{
-	"name": "sonar.jacoco.reportPaths",
-	"value": "./custom_dir/target/jacoco.exec",
-	"type": "string"
-}
+									"name": "sonar.jacoco.reportPaths",
+									"value": "./custom_dir/target/jacoco.exec",
+									"type": "string"
+								}
 							]
 						},
 						"delete_instances": true
@@ -168,6 +168,11 @@
 			{
 				"name": "test_report_paths",
 				"value": "./custom_dir/target/jacoco.exec",
+				"type": "string"
+			},
+			{
+				"name": "additional_properties_file",
+				"value": "./custom_dir/sonar-project.properties",
 				"type": "string"
 			}
 		],
