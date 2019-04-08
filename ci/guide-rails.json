@@ -150,7 +150,7 @@
 		"default_properties": [
 			{
 				"name": "java_binaries",
-				"value": "./target/classes",
+				"value": "./custom_dir/target/classes",
 				"type": "string"
 			},
 			{
