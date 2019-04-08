@@ -99,7 +99,7 @@
 						"dependencies": [],
 						"downloads": [],
 						"files": [
-							"target/maven-code-coverage.jar"
+							"custom_dir/target/maven-code-coverage.jar"
 						],
 						"package_install_command": "",
 						"installed_path": ""
@@ -157,22 +157,22 @@
 		"default_properties": [
 			{
 				"name": "java_binaries",
-				"value": "./custom_dir/target/classes",
+				"value": "**/classes",
 				"type": "string"
 			},
 			{
 				"name": "source_dirs",
-				"value": "./custom_dir/src/main/java",
+				"value": "**/src/main/java",
 				"type": "string"
 			},
 			{
 				"name": "test_report_paths",
-				"value": "./custom_dir/target/jacoco.exec",
+				"value": "custom_dir/target/jacoco.exec",
 				"type": "string"
 			},
 			{
 				"name": "additional_properties_file",
-				"value": "./custom_dir/sonar-project.properties",
+				"value": "",
 				"type": "string"
 			}
 		],
