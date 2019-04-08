@@ -93,7 +93,7 @@
 						"dependencies": [],
 						"downloads": [],
 						"files": [
-							"maven-code-coverage.jar"
+							"./custom_dir/target/maven-code-coverage.jar"
 						],
 						"package_install_command": "",
 						"installed_path": ""
