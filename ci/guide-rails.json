@@ -148,7 +148,18 @@
 				"code_analysis": null
 			}
 		},
-		"default_properties": null,
+		"default_properties": [
+			{
+				"name": "java_binaries",
+				"value": "./target/classes",
+				"type": "string"
+			},
+			{
+				"name": "source_dirs",
+				"value": "./custom_dir/src/main/java",
+				"type": "string"
+			}
+		],
 		"deployment_files": [
 			{
 				"source_path": "ci/config/application.config",
