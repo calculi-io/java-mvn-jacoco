@@ -172,7 +172,7 @@
 			},
 			{
 				"name": "additional_properties_file",
-				"value": "",
+				"value": "sonar-project.properties",
 				"type": "string"
 			}
 		],
