@@ -158,6 +158,11 @@
 				"name": "source_dirs",
 				"value": "./custom_dir/src/main/java",
 				"type": "string"
+			},
+			{
+				"name": "test_report_paths",
+				"value": "./custom_dir/target/jacoco.exec",
+				"type": "string"
 			}
 		],
 		"deployment_files": [
