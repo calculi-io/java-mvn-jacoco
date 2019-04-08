@@ -2,6 +2,8 @@ package com.mkyong.examples;
 
 public class MessageBuilder {
 
+static long balls = 0;
+
     public String getMessage(String name) {
 
         StringBuilder result = new StringBuilder();
