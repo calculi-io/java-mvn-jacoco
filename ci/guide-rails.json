@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"version": 1
+		"version": 2
 	},
 	"application": {
 		"name": "mvn-jacoco",
@@ -28,20 +28,6 @@
 			{
 				"name": "Build",
 				"segment_type": "build",
-				"job_steps": [
-					{
-						"name": "validate",
-						"definition": "Run the maven validate command",
-						"command": "mvn clean package -f custom_dir/pom.xml",
-						"properties": null
-					},
-					{
-						"name": "copy-jar",
-						"definition": "Copy final JAR to expected location",
-						"command": "cp -f custom_dir/target/maven-code-coverage.jar .",
-						"properties": null
-					}
-				],
 				"exit_actions": {
 					"default": {
 						"fetch_logs": true,
@@ -89,20 +75,14 @@
 					"update_watch_time": "",
 					"serial": false
 				},
-				"application_init": {
-					"command": "",
-					"arguments": null
-				},
+				"application_init": {},
 				"packages": [
 					{
 						"name": "((application.name))",
-						"dependencies": [],
 						"downloads": [],
 						"files": [
 							"custom_dir/target/maven-code-coverage.jar"
-						],
-						"package_install_command": "",
-						"installed_path": ""
+						]
 					}
 				],
 				"instance_tags": [
@@ -132,7 +112,26 @@
 						"((ivy.defaultCacheDir))",
 						"((maven.repo.local))"
 					]
-				}
+				},
+				"tasks": [
+					{
+						"name": "mvn-jacoco",
+						"steps": [
+							{
+								"name": "validate",
+								"definition": "Run the maven validate command",
+								"command": "mvn clean package -f custom_dir/pom.xml",
+								"properties": null
+							},
+							{
+								"name": "copy-jar",
+								"definition": "Copy final JAR to expected location",
+								"command": "cp -f custom_dir/target/maven-code-coverage.jar .",
+								"properties": null
+							}
+						]
+					}
+				]
 			}
 		],
 		"exit_actions": {
@@ -156,6 +155,11 @@
 		},
 		"default_properties": [
 			{
+				"name": "additional_properties_file",
+				"value": "sonar-project.properties",
+				"type": "string"
+			},
+			{
 				"name": "java_binaries",
 				"value": "**/classes",
 				"type": "string"
@@ -168,11 +172,6 @@
 			{
 				"name": "test_report_paths",
 				"value": "custom_dir/target/jacoco.exec",
-				"type": "string"
-			},
-			{
-				"name": "additional_properties_file",
-				"value": "sonar-project.properties",
 				"type": "string"
 			}
 		],
@@ -194,10 +193,7 @@
 				"target_path": "bin/execute-tests.sh"
 			}
 		],
-		"application_init": {
-			"command": "",
-			"arguments": null
-		},
+		"application_init": {},
 		"process": {
 			"init": {
 				"command": "bin/start-service.sh"
